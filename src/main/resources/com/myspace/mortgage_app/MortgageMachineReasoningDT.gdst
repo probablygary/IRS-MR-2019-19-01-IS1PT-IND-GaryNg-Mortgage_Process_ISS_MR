@@ -27,7 +27,7 @@
     <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionColumn>
       <hideColumn>false</hideColumn>
       <width>-1</width>
-      <header>Applicant Annual Income</header>
+      <header>Applicant Own House</header>
       <constraintValueType>1</constraintValueType>
       <parameters/>
       <definition>
@@ -38,17 +38,17 @@
                 <compositeJunctionType>&amp;&amp;</compositeJunctionType>
                 <constraints>
                   <org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
-                    <value>$greater</value>
-                    <operator>&gt;</operator>
-                    <constraintValueType>7</constraintValueType>
+                    <value>true</value>
+                    <operator>==</operator>
+                    <constraintValueType>1</constraintValueType>
                     <expression>
                       <parts/>
                       <index>2147483647</index>
                     </expression>
                     <parameters/>
                     <factType>Application</factType>
-                    <fieldName>annualincome</fieldName>
-                    <fieldType>java.lang.Integer</fieldType>
+                    <fieldName>ownHouse</fieldName>
+                    <fieldType>java.lang.Boolean</fieldType>
                     <expLeftSide>
                       <parts>
                         <org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact>
@@ -56,47 +56,9 @@
                             <prev class="org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact" reference="../.."/>
                             <next class="org.drools.workbench.models.datamodel.rule.ExpressionField">
                               <prev class="org.drools.workbench.models.datamodel.rule.ExpressionField" reference="../.."/>
-                              <name>annualincome</name>
-                              <classType>java.lang.Integer</classType>
-                              <genericType>Integer</genericType>
-                            </next>
-                            <name>applicant</name>
-                            <classType>Applicant</classType>
-                            <genericType>Applicant</genericType>
-                          </next>
-                          <name>Application</name>
-                          <classType>Application</classType>
-                          <genericType>Application</genericType>
-                          <factType>Application</factType>
-                        </org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact>
-                        <org.drools.workbench.models.datamodel.rule.ExpressionField reference="../org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact/next"/>
-                        <org.drools.workbench.models.datamodel.rule.ExpressionField reference="../org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact/next/next"/>
-                      </parts>
-                      <index>2147483647</index>
-                    </expLeftSide>
-                  </org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
-                  <org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
-                    <value>$less_or_equal</value>
-                    <operator>&lt;=</operator>
-                    <constraintValueType>7</constraintValueType>
-                    <expression>
-                      <parts/>
-                      <index>2147483647</index>
-                    </expression>
-                    <parameters/>
-                    <factType>Application</factType>
-                    <fieldName>annualincome</fieldName>
-                    <fieldType>java.lang.Integer</fieldType>
-                    <expLeftSide>
-                      <parts>
-                        <org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact>
-                          <next class="org.drools.workbench.models.datamodel.rule.ExpressionField">
-                            <prev class="org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact" reference="../.."/>
-                            <next class="org.drools.workbench.models.datamodel.rule.ExpressionField">
-                              <prev class="org.drools.workbench.models.datamodel.rule.ExpressionField" reference="../.."/>
-                              <name>annualincome</name>
-                              <classType>java.lang.Integer</classType>
-                              <genericType>Integer</genericType>
+                              <name>ownHouse</name>
+                              <classType>java.lang.Boolean</classType>
+                              <genericType>Boolean</genericType>
                             </next>
                             <name>applicant</name>
                             <classType>Applicant</classType>
@@ -128,32 +90,19 @@
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>100</width>
-          <header>Applicant Annual Income</header>
+          <width>219</width>
+          <header>Applicant Own House</header>
           <constraintValueType>1</constraintValueType>
-          <factField>annualincome</factField>
-          <fieldType>Integer</fieldType>
+          <fieldType>Boolean</fieldType>
           <parameters/>
-          <varName>$greater</varName>
-          <factType>Applicant</factType>
-        </org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
-        <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
-          <hideColumn>false</hideColumn>
-          <width>100</width>
-          <header>Applicant Annual Income</header>
-          <constraintValueType>1</constraintValueType>
-          <factField>annualincome</factField>
-          <fieldType>Integer</fieldType>
-          <parameters/>
-          <varName>$less_or_equal</varName>
-          <factType>Applicant</factType>
+          <varName></varName>
         </org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
       </childColumns>
     </org.drools.workbench.models.guided.dtable.shared.model.BRLConditionColumn>
     <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionColumn>
       <hideColumn>false</hideColumn>
       <width>-1</width>
-      <header>Property</header>
+      <header>Applicant Age</header>
       <constraintValueType>1</constraintValueType>
       <parameters/>
       <definition>
@@ -164,45 +113,7 @@
                 <compositeJunctionType>&amp;&amp;</compositeJunctionType>
                 <constraints>
                   <org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
-                    <value>$saleprice_less</value>
-                    <operator>&lt;</operator>
-                    <constraintValueType>7</constraintValueType>
-                    <expression>
-                      <parts/>
-                      <index>2147483647</index>
-                    </expression>
-                    <parameters/>
-                    <factType>Application</factType>
-                    <fieldName>saleprice</fieldName>
-                    <fieldType>java.lang.Integer</fieldType>
-                    <expLeftSide>
-                      <parts>
-                        <org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact>
-                          <next class="org.drools.workbench.models.datamodel.rule.ExpressionField">
-                            <prev class="org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact" reference="../.."/>
-                            <next class="org.drools.workbench.models.datamodel.rule.ExpressionField">
-                              <prev class="org.drools.workbench.models.datamodel.rule.ExpressionField" reference="../.."/>
-                              <name>saleprice</name>
-                              <classType>java.lang.Integer</classType>
-                              <genericType>Integer</genericType>
-                            </next>
-                            <name>property</name>
-                            <classType>Property</classType>
-                            <genericType>Property</genericType>
-                          </next>
-                          <name>Application</name>
-                          <classType>Application</classType>
-                          <genericType>Application</genericType>
-                          <factType>Application</factType>
-                        </org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact>
-                        <org.drools.workbench.models.datamodel.rule.ExpressionField reference="../org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact/next"/>
-                        <org.drools.workbench.models.datamodel.rule.ExpressionField reference="../org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact/next/next"/>
-                      </parts>
-                      <index>2147483647</index>
-                    </expLeftSide>
-                  </org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
-                  <org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
-                    <value>$age_less</value>
+                    <value>$ageLess</value>
                     <operator>&lt;</operator>
                     <constraintValueType>7</constraintValueType>
                     <expression>
@@ -224,9 +135,9 @@
                               <classType>java.lang.Integer</classType>
                               <genericType>Integer</genericType>
                             </next>
-                            <name>property</name>
-                            <classType>Property</classType>
-                            <genericType>Property</genericType>
+                            <name>applicant</name>
+                            <classType>Applicant</classType>
+                            <genericType>Applicant</genericType>
                           </next>
                           <name>Application</name>
                           <classType>Application</classType>
@@ -240,8 +151,8 @@
                     </expLeftSide>
                   </org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
                   <org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
-                    <value>$location</value>
-                    <operator>==</operator>
+                    <value>$ageGE</value>
+                    <operator>&gt;=</operator>
                     <constraintValueType>7</constraintValueType>
                     <expression>
                       <parts/>
@@ -249,8 +160,8 @@
                     </expression>
                     <parameters/>
                     <factType>Application</factType>
-                    <fieldName>locale</fieldName>
-                    <fieldType>java.lang.String</fieldType>
+                    <fieldName>age</fieldName>
+                    <fieldType>java.lang.Integer</fieldType>
                     <expLeftSide>
                       <parts>
                         <org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact>
@@ -258,13 +169,13 @@
                             <prev class="org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact" reference="../.."/>
                             <next class="org.drools.workbench.models.datamodel.rule.ExpressionField">
                               <prev class="org.drools.workbench.models.datamodel.rule.ExpressionField" reference="../.."/>
-                              <name>locale</name>
-                              <classType>java.lang.String</classType>
-                              <genericType>String</genericType>
+                              <name>age</name>
+                              <classType>java.lang.Integer</classType>
+                              <genericType>Integer</genericType>
                             </next>
-                            <name>property</name>
-                            <classType>Property</classType>
-                            <genericType>Property</genericType>
+                            <name>applicant</name>
+                            <classType>Applicant</classType>
+                            <genericType>Applicant</genericType>
                           </next>
                           <name>Application</name>
                           <classType>Application</classType>
@@ -292,35 +203,166 @@
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
           <width>100</width>
-          <header>Property</header>
-          <constraintValueType>1</constraintValueType>
-          <factField>saleprice</factField>
-          <fieldType>Integer</fieldType>
-          <parameters/>
-          <varName>$saleprice_less</varName>
-          <factType>Property</factType>
-        </org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
-        <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
-          <hideColumn>false</hideColumn>
-          <width>100</width>
-          <header>Property</header>
+          <header>Applicant Age</header>
           <constraintValueType>1</constraintValueType>
           <factField>age</factField>
           <fieldType>Integer</fieldType>
           <parameters/>
-          <varName>$age_less</varName>
-          <factType>Property</factType>
+          <varName>$ageLess</varName>
+          <factType>Applicant</factType>
         </org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
           <width>100</width>
-          <header>Property</header>
+          <header>Applicant Age</header>
           <constraintValueType>1</constraintValueType>
-          <factField>locale</factField>
-          <fieldType>String</fieldType>
+          <factField>age</factField>
+          <fieldType>Integer</fieldType>
           <parameters/>
-          <varName>$location</varName>
-          <factType>Property</factType>
+          <varName>$ageGE</varName>
+          <factType>Applicant</factType>
+        </org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
+      </childColumns>
+    </org.drools.workbench.models.guided.dtable.shared.model.BRLConditionColumn>
+    <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionColumn>
+      <hideColumn>false</hideColumn>
+      <width>-1</width>
+      <header>Applicant Credit Rating</header>
+      <constraintValueType>1</constraintValueType>
+      <parameters/>
+      <definition>
+        <org.drools.workbench.models.datamodel.rule.FactPattern>
+          <constraintList>
+            <constraints>
+              <org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
+                <value>$creditRating</value>
+                <operator>==</operator>
+                <constraintValueType>7</constraintValueType>
+                <expression>
+                  <parts/>
+                  <index>2147483647</index>
+                </expression>
+                <parameters/>
+                <factType>Application</factType>
+                <fieldName>creditrating</fieldName>
+                <fieldType>java.lang.Integer</fieldType>
+                <expLeftSide>
+                  <parts>
+                    <org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact>
+                      <next class="org.drools.workbench.models.datamodel.rule.ExpressionField">
+                        <prev class="org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact" reference="../.."/>
+                        <next class="org.drools.workbench.models.datamodel.rule.ExpressionField">
+                          <prev class="org.drools.workbench.models.datamodel.rule.ExpressionField" reference="../.."/>
+                          <name>creditrating</name>
+                          <classType>java.lang.Integer</classType>
+                          <genericType>Integer</genericType>
+                        </next>
+                        <name>applicant</name>
+                        <classType>Applicant</classType>
+                        <genericType>Applicant</genericType>
+                      </next>
+                      <name>Application</name>
+                      <classType>Application</classType>
+                      <genericType>Application</genericType>
+                      <factType>Application</factType>
+                    </org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact>
+                    <org.drools.workbench.models.datamodel.rule.ExpressionField reference="../org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact/next"/>
+                    <org.drools.workbench.models.datamodel.rule.ExpressionField reference="../org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact/next/next"/>
+                  </parts>
+                  <index>2147483647</index>
+                </expLeftSide>
+              </org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
+            </constraints>
+          </constraintList>
+          <factType>Application</factType>
+          <isNegated>false</isNegated>
+          <window>
+            <parameters/>
+          </window>
+        </org.drools.workbench.models.datamodel.rule.FactPattern>
+      </definition>
+      <childColumns>
+        <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
+          <hideColumn>false</hideColumn>
+          <width>100</width>
+          <header>Applicant Credit Rating</header>
+          <constraintValueType>1</constraintValueType>
+          <factField>creditrating</factField>
+          <fieldType>Integer</fieldType>
+          <parameters/>
+          <varName>$creditRating</varName>
+          <factType>Applicant</factType>
+        </org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
+      </childColumns>
+    </org.drools.workbench.models.guided.dtable.shared.model.BRLConditionColumn>
+    <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionColumn>
+      <hideColumn>false</hideColumn>
+      <width>-1</width>
+      <header>Applicant Has Job</header>
+      <constraintValueType>1</constraintValueType>
+      <parameters/>
+      <definition>
+        <org.drools.workbench.models.datamodel.rule.FactPattern>
+          <constraintList>
+            <constraints>
+              <org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
+                <value>$hasJob</value>
+                <operator>==</operator>
+                <constraintValueType>7</constraintValueType>
+                <expression>
+                  <parts/>
+                  <index>2147483647</index>
+                </expression>
+                <parameters/>
+                <factType>Application</factType>
+                <fieldName>hasJob</fieldName>
+                <fieldType>java.lang.Boolean</fieldType>
+                <expLeftSide>
+                  <parts>
+                    <org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact>
+                      <next class="org.drools.workbench.models.datamodel.rule.ExpressionField">
+                        <prev class="org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact" reference="../.."/>
+                        <next class="org.drools.workbench.models.datamodel.rule.ExpressionField">
+                          <prev class="org.drools.workbench.models.datamodel.rule.ExpressionField" reference="../.."/>
+                          <name>hasJob</name>
+                          <classType>java.lang.Boolean</classType>
+                          <genericType>Boolean</genericType>
+                        </next>
+                        <name>applicant</name>
+                        <classType>Applicant</classType>
+                        <genericType>Applicant</genericType>
+                      </next>
+                      <name>Application</name>
+                      <classType>Application</classType>
+                      <genericType>Application</genericType>
+                      <factType>Application</factType>
+                    </org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact>
+                    <org.drools.workbench.models.datamodel.rule.ExpressionField reference="../org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact/next"/>
+                    <org.drools.workbench.models.datamodel.rule.ExpressionField reference="../org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact/next/next"/>
+                  </parts>
+                  <index>2147483647</index>
+                </expLeftSide>
+              </org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
+            </constraints>
+          </constraintList>
+          <factType>Application</factType>
+          <isNegated>false</isNegated>
+          <window>
+            <parameters/>
+          </window>
+        </org.drools.workbench.models.datamodel.rule.FactPattern>
+      </definition>
+      <childColumns>
+        <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
+          <hideColumn>false</hideColumn>
+          <width>100</width>
+          <header>Applicant Has Job</header>
+          <constraintValueType>1</constraintValueType>
+          <factField>hasJob</factField>
+          <fieldType>Boolean</fieldType>
+          <parameters/>
+          <varName>$hasJob</varName>
+          <factType>Applicant</factType>
         </org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
       </childColumns>
     </org.drools.workbench.models.guided.dtable.shared.model.BRLConditionColumn>
@@ -333,7 +375,7 @@
         <isOtherwise>false</isOtherwise>
       </typedDefaultValue>
       <hideColumn>false</hideColumn>
-      <width>100</width>
+      <width>245</width>
       <header>Approval In Limit</header>
       <boundName>application</boundName>
       <factField>inlimitMR</factField>
@@ -393,15 +435,9 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="int">200000</valueNumeric>
+        <valueBoolean>true</valueBoolean>
         <valueString></valueString>
-        <dataType>NUMERIC_INTEGER</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
-        <valueNumeric class="int">0</valueNumeric>
-        <valueString></valueString>
-        <dataType>NUMERIC_INTEGER</dataType>
+        <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -416,7 +452,13 @@
       </value>
       <value>
         <valueString></valueString>
-        <dataType>STRING</dataType>
+        <dataType>NUMERIC_INTEGER</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>false</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -444,36 +486,34 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="int">100000</valueNumeric>
+        <valueBoolean>false</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="int">200000</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="int">300000</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="int">5</valueNumeric>
+        <valueBoolean>false</valueBoolean>
         <valueString></valueString>
-        <dataType>NUMERIC_INTEGER</dataType>
+        <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Urban</valueString>
-        <dataType>STRING</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
-        <valueBoolean>true</valueBoolean>
+        <valueBoolean>false</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
@@ -497,36 +537,34 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="int">50000</valueNumeric>
+        <valueBoolean>false</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="int">100000</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="int">100000</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="int">10</valueNumeric>
+        <valueBoolean>false</valueBoolean>
         <valueString></valueString>
-        <dataType>NUMERIC_INTEGER</dataType>
+        <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Rural</valueString>
-        <dataType>STRING</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
-        <valueBoolean>true</valueBoolean>
+        <valueBoolean>false</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
@@ -550,15 +588,9 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="int">0</valueNumeric>
+        <valueBoolean>false</valueBoolean>
         <valueString></valueString>
-        <dataType>NUMERIC_INTEGER</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
-        <valueNumeric class="int">50000</valueNumeric>
-        <valueString></valueString>
-        <dataType>NUMERIC_INTEGER</dataType>
+        <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -573,7 +605,13 @@
       </value>
       <value>
         <valueString></valueString>
-        <dataType>STRING</dataType>
+        <dataType>NUMERIC_INTEGER</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>false</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>

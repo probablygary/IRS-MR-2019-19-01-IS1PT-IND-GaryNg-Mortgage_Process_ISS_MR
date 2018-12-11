@@ -17,7 +17,7 @@
         <isOtherwise>false</isOtherwise>
       </typedDefaultValue>
       <hideColumn>false</hideColumn>
-      <width>100</width>
+      <width>211</width>
       <attribute>ruleflow-group</attribute>
       <reverseOrder>false</reverseOrder>
       <useRowNumber>false</useRowNumber>
@@ -378,6 +378,7 @@
     <list>
       <value>
         <valueNumeric class="int">1</valueNumeric>
+        <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -387,7 +388,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>mortgagecalculation</valueString>
+        <valueString>mortgagemachinereasoningDT</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -428,6 +429,7 @@
     <list>
       <value>
         <valueNumeric class="int">2</valueNumeric>
+        <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -437,7 +439,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>mortgagecalculation</valueString>
+        <valueString>mortgagemachinereasoningDT</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -480,6 +482,7 @@
     <list>
       <value>
         <valueNumeric class="int">3</valueNumeric>
+        <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -489,7 +492,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>mortgagecalculation</valueString>
+        <valueString>mortgagemachinereasoningDT</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -532,6 +535,7 @@
     <list>
       <value>
         <valueNumeric class="int">4</valueNumeric>
+        <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -541,7 +545,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>mortgagecalculation</valueString>
+        <valueString>mortgagemachinereasoningDT</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
